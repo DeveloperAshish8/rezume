@@ -51,13 +51,13 @@ const Leadership = ({ activeIndex, setactiveIndex }) => {
                 label="Position"
                 placeholder="Enter title eg. Coordinator"
                 register={register(`position${i}`)}
-                defaultValue={resume.leadership[`position${i}`]}
+                defaultValue={resume.leadership[`position${i}`] || ""}
               />
               <InputControl
                 label="Organisation Name"
                 placeholder="eg. College Coding Club"
                 register={register(`organisation${i}`)}
-                defaultValue={resume.leadership[`organisation${i}`]}
+                defaultValue={resume.leadership[`organisation${i}`] || ""}
               />
             </div>
             <div className="flex md:gap-24 mt-1 gap-1  md:flex-row flex-col">
@@ -65,13 +65,13 @@ const Leadership = ({ activeIndex, setactiveIndex }) => {
                 label="Duration"
                 placeholder="eg: 2021-22"
                 register={register(`duration${i}`)}
-                defaultValue={resume.leadership[`duration${i}`]}
+                defaultValue={resume.leadership[`duration${i}`] || ""}
               />
               <InputControl
                 label="Location"
                 placeholder="Enter location eg. Remote"
                 register={register(`location${i}`)}
-                defaultValue={resume.leadership[`location${i}`]}
+                defaultValue={resume.leadership[`location${i}`] || ""}
               />
             </div>
 
@@ -84,7 +84,7 @@ const Leadership = ({ activeIndex, setactiveIndex }) => {
                   placeholder="What your responsibilities were"
                   detail={true}
                   register={register(`Ex${i}details1`)}
-                  defaultValue={resume.leadership[`Ex${i}details1`]}
+                  defaultValue={resume.leadership[`Ex${i}details1`] || ""}
                 />
               </div>
 
@@ -93,7 +93,7 @@ const Leadership = ({ activeIndex, setactiveIndex }) => {
                   placeholder="Improvement or impact you made in the club"
                   detail={true}
                   register={register(`Ex${i}details2`)}
-                  defaultValue={resume.leadership[`Ex${i}details2`]}
+                  defaultValue={resume.leadership[`Ex${i}details2`] || ""}
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -101,7 +101,7 @@ const Leadership = ({ activeIndex, setactiveIndex }) => {
                   placeholder="What your responsibilities were"
                   register={register(`Ex${i}details3`)}
                   detail={true}
-                  defaultValue={resume.leadership[`Ex${i}details3`]}
+                  defaultValue={resume.leadership[`Ex${i}details3`] || ""}
                 />
               </div>
             </div>
