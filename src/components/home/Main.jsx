@@ -8,6 +8,7 @@ import {
   Medal,
   Presentation,
   Store,
+  Users,
 } from "lucide-react";
 
 const Main = () => {
@@ -17,6 +18,7 @@ const Main = () => {
     { title: "Projects", src: <Presentation /> },
     { title: "Skills ", src: <BrainCircuit /> },
     { title: "Education", src: <GraduationCap /> },
+    { title: "Leadership", src: <Users /> },
     { title: "Acheivement", src: <Medal /> },
   ];
   const [activeIndex, setactiveIndex] = useState(0);

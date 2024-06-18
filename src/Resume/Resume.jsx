@@ -185,7 +185,6 @@ const Rezume = ({ resume }) => {
               </View>
             )}
         </View>
-
         {/* Experience section */}
         {rezume.experience.designation0?.length > 2 &&
           rezume.experience.duration0?.length > 2 &&
@@ -275,7 +274,6 @@ const Rezume = ({ resume }) => {
                 )}
             </View>
           )}
-
         {/* Projects Section */}
         <View style={styles.sections}>
           <Text style={styles.heading}>Projects</Text>
@@ -388,7 +386,6 @@ const Rezume = ({ resume }) => {
               </View>
             )}
         </View>
-
         {/* skills Section */}
         <View style={styles.sections}>
           <Text style={styles.heading}>Technical Skills</Text>
@@ -421,7 +418,6 @@ const Rezume = ({ resume }) => {
             </View>
           </View>
         </View>
-
         {/* Acheivements Section */}
         {rezume.acheivement.acheivement1?.length > 2 && (
           <View style={styles.sections}>
@@ -464,6 +460,95 @@ const Rezume = ({ resume }) => {
             </View>
           </View>
         )}
+        {!rezume.experience.designation0 &&
+          !rezume.experience.company0 &&
+          rezume.leadership.position0?.length > 2 &&
+          rezume.leadership.organisation0?.length > 2 &&
+          rezume.leadership.location0?.length > 2 && (
+            <View style={styles.sections}>
+              <Text style={styles.heading}>Position of Responsibility</Text>
+              <Svg height="2" width="530">
+                <Line
+                  x1="900"
+                  y1="0"
+                  x2="0"
+                  y2="0"
+                  strokeWidth={1}
+                  stroke="black"
+                />
+              </Svg>
+              <View style={styles.section}>
+                <View style={styles.innerHead}>
+                  <Text style={styles.innerHead1}>
+                    {rezume.leadership.position0}
+                  </Text>
+                  <Text style={styles.innerHead2}>
+                    {rezume.leadership.duration0}
+                  </Text>
+                </View>
+                <View style={styles.innerHead}>
+                  <Text style={styles.innerHead2}>
+                    {rezume.leadership.organisation0}
+                  </Text>
+                  <Text style={styles.innerHead2}>
+                    {rezume.leadership.location0}
+                  </Text>
+                </View>
+                <View style={styles.points}>
+                  <View style={styles.point}>
+                    <Text>•</Text>
+                    <Text>{rezume.leadership.Ex0details1}</Text>
+                  </View>
+                  <View style={styles.point}>
+                    <Text>•</Text>
+                    <Text>{rezume.leadership.Ex0details2}</Text>
+                  </View>
+                  <View style={styles.point}>
+                    <Text>•</Text>
+                    <Text>{rezume.leadership.Ex0details3}</Text>
+                  </View>
+                </View>
+              </View>
+
+              {rezume.leadership.position1?.length > 2 &&
+                rezume.leadership.position1?.length > 2 &&
+                rezume.leadership.organisation1?.length > 2 &&
+                rezume.leadership.location1?.length > 2 && (
+                  <View style={styles.section}>
+                    <View style={styles.innerHead}>
+                      <Text style={styles.innerHead1}>
+                        {rezume.leadership.position1}
+                      </Text>
+                      <Text style={styles.innerHead2}>
+                        {rezume.leadership.duration1}
+                      </Text>
+                    </View>
+                    <View style={styles.innerHead}>
+                      <Text style={styles.innerHead2}>
+                        {rezume.leadership.organisation1}
+                      </Text>
+                      <Text style={styles.innerHead2}>
+                        {rezume.leadership.location1}
+                      </Text>
+                    </View>
+                    <View style={styles.points}>
+                      <View style={styles.point}>
+                        <Text>•</Text>
+                        <Text>{rezume.leadership.Ex1details1}</Text>
+                      </View>
+                      <View style={styles.point}>
+                        <Text>•</Text>
+                        <Text>{rezume.leadership.Ex1details2}</Text>
+                      </View>
+                      <View style={styles.point}>
+                        <Text>•</Text>
+                        <Text>{rezume.leadership.Ex1details3}</Text>
+                      </View>
+                    </View>
+                  </View>
+                )}
+            </View>
+          )}
       </Page>
     </Document>
   );

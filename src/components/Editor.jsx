@@ -5,6 +5,7 @@ import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
 import Education from "./sections/Education";
 import Acheivement from "./sections/Acheivements";
+import Leadership from "./sections/Leadership";
 
 const Editor = ({ sections, activeIndex, setactiveIndex }) => {
   const renderContent = React.useCallback(() => {
@@ -45,6 +46,14 @@ const Editor = ({ sections, activeIndex, setactiveIndex }) => {
 
       case 5:
         return (
+          <Leadership
+            activeIndex={activeIndex}
+            setactiveIndex={setactiveIndex}
+          />
+        );
+
+      case 6:
+        return (
           <Acheivement
             activeIndex={activeIndex}
             setactiveIndex={setactiveIndex}
@@ -78,6 +87,10 @@ const Editor = ({ sections, activeIndex, setactiveIndex }) => {
     },
     {
       id: 5,
+      desc: "Added only if there is one or less Experience",
+    },
+    {
+      id: 6,
       desc: "Your proud things",
     },
   ];

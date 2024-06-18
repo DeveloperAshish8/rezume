@@ -10,12 +10,14 @@ const ResumeContextProvider = (props) => {
       skills: [],
       project: [],
       acheivement: {},
+      leadership: [],
     }
   );
 
   const [experienceCount, setExperienceCount] = useState(1);
   const [projectCount, setProjectCount] = useState(1);
   const [educationCount, setEducationCount] = useState(1);
+  const [leadershipCount, setLeadershipCount] = useState(1);
   const [uploadedResume, setUploadedResume] = useState();
 
   function updatePersonal(data) {
@@ -41,6 +43,24 @@ const ResumeContextProvider = (props) => {
   function updateAcheivement(data) {
     setResume({ ...resume, acheivement: data });
   }
+
+  function updateLeadership(data) {
+    setResume({ ...resume, leadership: data });
+  }
+
+  const deleteLeadershipItem = (i) => {
+    delete resume.leadership[`position${i}`];
+    delete resume.leadership[`organisation${i}`];
+    delete resume.leadership[`duration${i}`];
+    delete resume.leadership[`location${i}`];
+    delete resume.leadership[`position${i}details1`];
+    delete resume.leadership[`position${i}details2`];
+    delete resume.leadership[`position${i}details3`];
+    setResume({ ...resume, leadership: resume.leadership });
+    console.log(resume.leadership);
+    setLeadershipCount(leadershipCount - 1);
+    // console.log("deleted");
+  };
 
   const deleteExpItem = (i) => {
     delete resume.experience[`designation${i}`];
@@ -102,6 +122,10 @@ const ResumeContextProvider = (props) => {
     deleteEduItem,
     uploadedResume,
     setUploadedResume,
+    leadershipCount,
+    setLeadershipCount,
+    deleteLeadershipItem,
+    updateLeadership,
   };
 
   return (
