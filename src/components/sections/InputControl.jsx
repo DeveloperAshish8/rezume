@@ -10,7 +10,7 @@ const InputControl = ({ label, detail, ...props }) => {
       )}
       <input
         {...props}
-        // {...register}
+        {...props.type}
         {...props.register}
         required
         className={`${

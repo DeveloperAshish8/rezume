@@ -12,7 +12,12 @@ const Projects = ({ activeIndex, setactiveIndex }) => {
     updateProject,
     resume,
   } = useContext(ResumeData);
-  const { register, handleSubmit, reset } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
 
   const projectSubmit = (data) => {
     updateProject(data);
@@ -44,18 +49,36 @@ const Projects = ({ activeIndex, setactiveIndex }) => {
               ""
             )}
             <div className="flex md:gap-24  gap-1  md:flex-row flex-col">
-              <InputControl
-                label="Project Title"
-                placeholder="Enter title eg. Chat app"
-                register={register(`title${i}`)}
-                defaultValue={resume.project[`title${i}`]}
-              />
-              <InputControl
-                label="Tech Stacks"
-                placeholder="eg. ReactJS, Tailwind, Firebase"
-                register={register(`techStacks${i}`)}
-                defaultValue={resume.project[`techStacks${i}`]}
-              />
+              <div className="flex flex-col gap-1">
+                <InputControl
+                  label="Project Title"
+                  placeholder="Enter title eg. Chat app"
+                  register={register(`title${i}`, {
+                    required: "Project Title is required",
+                  })}
+                  defaultValue={resume.project[`title${i}`]}
+                />
+                {errors[`title${i}`] && (
+                  <span className="text-[#F04438] text-sm ml-2 ">
+                    {errors[`title${i}`].message}
+                  </span>
+                )}
+              </div>
+              <div className="flex flex-col gap-1">
+                <InputControl
+                  label="Tech Stacks"
+                  placeholder="eg. ReactJS, Tailwind, Firebase"
+                  register={register(`techStacks${i}`, {
+                    required: "Tech Stack is required",
+                  })}
+                  defaultValue={resume.project[`techStacks${i}`]}
+                />
+                {errors[`techStacks${i}`] && (
+                  <span className="text-[#F04438] text-sm ml-2 ">
+                    {errors[`techStacks${i}`].message}
+                  </span>
+                )}
+              </div>
             </div>
             <div className="flex md:gap-24 mt-1 gap-1  md:flex-row flex-col">
               <InputControl

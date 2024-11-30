@@ -12,7 +12,8 @@ const Acheivements = ({ activeIndex, setactiveIndex }) => {
 
   const AcheivementSubmit = (data) => {
     updateAcheivement(data);
-    navigate("/resume/download");
+    if (!resume?.personal.firstName) navigate("/resume");
+    else navigate("/resume/download");
     console.log(data);
   };
   return (

@@ -42,7 +42,7 @@ const Rezume = ({ resume }) => {
     },
     header: {
       display: "flex",
-      alignItems: "center",
+      // alignItems: "center",
       justifyContent: "center",
       marginBottom: "15px",
     },
