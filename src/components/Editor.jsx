@@ -95,7 +95,7 @@ const Editor = ({ sections, activeIndex, setactiveIndex }) => {
     },
   ];
   return (
-    <div className="flex flex-col min-h-[90vh] justify-between">
+    <div className="flex flex-col md:min-h-screen min-h-[90vh] justify-between">
       <div className="flex mt-6 flex-col  md:mt-20 md:max-w-[900px] md:mx-auto  mx-16 md:px-20">
         <h1 className="font-semibold mt-3 md:mt-0 text-3xl  md:mx-0 mx-auto flex gap-2 items-center">
           {sections[activeIndex].title}
