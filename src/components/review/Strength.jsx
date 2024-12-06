@@ -29,7 +29,9 @@ const Strength = ({ answer }) => {
         </h2>
 
         <div className="rounded-[50%] w-32 h-32 border-primary border-4 flex items-center  justify-center text-lg font-bold">
-          {answer ? answer : "error"}
+          {answer !== "Sorry - Something went wrong. Please try again!"
+            ? answer
+            : "error"}
         </div>
 
         <p
