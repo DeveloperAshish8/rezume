@@ -15,7 +15,11 @@ const UploadForm = ({ generateResponse }) => {
       return;
     }
     pdfToText(file)
-      .then((text) => setUploadedResume(text))
+      .then((text) => {
+        console.log(text);
+
+        setUploadedResume(text);
+      })
       .catch((error) => console.log(error));
   }
   return (

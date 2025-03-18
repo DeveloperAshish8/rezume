@@ -115,10 +115,11 @@ const Editor = ({ sections, activeIndex, setactiveIndex }) => {
 
         {renderContent()}
       </div>
+
       <div className="flex justify-center items-center mb-2  gap-2 ">
         <span>Created with ❤️ in</span>
         <img src="/IndianFlag.png" alt="Flag" className="w-6 h-6" />
-        <span>by Ashish</span>
+        {/* <span>by Ashish</span> */}
       </div>
     </div>
   );

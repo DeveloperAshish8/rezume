@@ -48,13 +48,13 @@ const Footer = () => {
                   </a>
                 </li>
 
-                <li>
-                  <a
+                <li className="text-[grey] transition hover:text-[grey]/75">
+                  {/* <a
                     className="text-[grey] transition hover:text-[grey]/75"
                     href="https://coinix.vercel.app"
-                  >
-                    Coinix
-                  </a>
+                  > */}
+                  Coinix
+                  {/* </a> */}
                 </li>
               </ul>
             </div>
@@ -109,42 +109,39 @@ const Footer = () => {
                   </a>
                 </li>
 
-                <li>
-                  <a
+                <li className="text-[grey] transition hover:text-[grey]/75">
+                  {/* <a
                     className="text-[grey] transition hover:text-[grey]/75"
                     href="https://ashish4.bio.link"
-                  >
-                    {" "}
-                    Contact{" "}
-                  </a>
+                  > */}{" "}
+                  Contact {/* </a> */}
                 </li>
 
-                <li>
-                  <a
+                <li className="text-[grey] transition hover:text-[grey]/75">
+                  {/* <a
                     className="text-[grey] transition hover:text-[grey]/75"
-                    href="https://chat.whatsapp.com/B8zZxzV7IeFI52BEWKOZCa"
-                  >
-                    {" "}
-                    Community{" "}
-                  </a>
+                    href=""
+                  > */}{" "}
+                  Community {/* </a> */}
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="mt-16 border-t border-gray-100 pt-8">
+        <div className="mt-16 border-t border-gray-100 pt-8 ">
           <p className="text-center text-base/relaxed text-gray-500">
             © Rezume 2024. All rights reserved.
             <br />
-            Created with ❤️ by
-            <a
+            Created with ❤️
+            {/* <img src="/IndianFlag.png" alt="Flag" className="w-6 h-6" /> */}
+            {/* <a
               href="https://ashish4.vercel.app"
               className="text-[grey] underline transition hover:text-[grey]/75"
             >
               {" "}
               Ashish
-            </a>
+            </a> */}
             .
           </p>
         </div>
