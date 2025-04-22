@@ -20,7 +20,7 @@ const Review = () => {
     setGeneratingAnswer(true);
     try {
       const response = await axios({
-        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${process.env.REACT_APP_API_KEY}
+        url: `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.REACT_APP_API_KEY}
         `,
         method: "post",
         data: {
@@ -29,6 +29,9 @@ const Review = () => {
       });
 
       setAnswer(
+        response["data"]["candidates"][0]["content"]["parts"][0]["text"]
+      );
+      console.log(
         response["data"]["candidates"][0]["content"]["parts"][0]["text"]
       );
     } catch (error) {
