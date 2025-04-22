@@ -1,7 +1,7 @@
 import React from "react";
 
 const Strength = ({ answer }) => {
-  console.log(answer);
+  // console.log(answer);
 
   const strength = {
     average:
@@ -14,7 +14,7 @@ const Strength = ({ answer }) => {
   };
 
   const strengthMessage = strength[answer.trim().toLowerCase()];
-  console.log("Message:", strengthMessage);
+  // console.log("Message:", strengthMessage);
 
   return (
     <div className="text-center">
