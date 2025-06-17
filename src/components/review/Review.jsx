@@ -60,7 +60,7 @@ const Review = () => {
   return (
     <>
       <Header />
-      {/* <div className="flex md:flex-row flex-col gap-8 lg:px-6 mx-auto my-6 md:max-w-[1500px] ">
+      <div className="flex md:flex-row flex-col gap-8 lg:px-6 mx-auto my-6 md:max-w-[1500px] ">
         <div className=" md:w-[50%]">
           <div className="flex flex-col gap-5 font-['Lexend'] mx-3">
             <h1 className=" text-3xl font-bold md:text-left text-center">
@@ -111,10 +111,10 @@ const Review = () => {
             <Waiting />
           )}
         </div>
-      </div> */}
-      <div className="flex justify-center items-center w-full h-[90vh]">
-        <h3 className="font-semibold text-lg text-primary">Deployed Soon</h3>
       </div>
+      {/* <div className="flex justify-center items-center w-full h-[90vh]">
+        <h3 className="font-semibold text-lg text-primary">Deployed Soon</h3>
+      </div> */}
       <Footer />
     </>
   );
